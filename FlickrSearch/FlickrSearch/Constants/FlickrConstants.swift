@@ -11,9 +11,9 @@ import UIKit
 class FlickrConstants: NSObject {
 
     static let api_key = "a4f28588b57387edc18282228da39744"
-    static let per_page = 60
+    static let per_page = 100
     static let searchURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(FlickrConstants.api_key)&format=json&nojsoncallback=1&safe_search=1&per_page=\(FlickrConstants.per_page)&text=%@&page=%ld"
-    static let imageURL = "https://farm%d.staticflickr.com/%@/%@_%@_\(FlickrConstants.size.url_s.value).jpg"
+    static let imageURL = "https://farm%d.staticflickr.com/%@/%@_%@_\(FlickrConstants.size.url_z.value).jpg"
     
     enum size: String {
         case url_sq = "s"   //small square 75x75
@@ -34,5 +34,5 @@ class FlickrConstants: NSObject {
         }
     }
     
-    static let defaultColumnCount: CGFloat = 3.0
+    //static let defaultColumnCount: CGFloat = 3.0
 }

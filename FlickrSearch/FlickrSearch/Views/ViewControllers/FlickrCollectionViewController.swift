@@ -13,7 +13,7 @@ class FlickrCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var searchBarController: UISearchController!
-    private var numberOfColumns: CGFloat = FlickrConstants.defaultColumnCount
+    private var numberOfColumns: CGFloat = 1.0
     private var viewModel = FlickrViewModel()
     private var isFirstTimeActive = true
     
@@ -98,9 +98,7 @@ extension FlickrCollectionViewController: UISearchControllerDelegate, UISearchBa
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        guard let text = searchBar.text, text.count > 1 else {
-            return
-        }
+       let text = "https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=1b2c896e061282f5db7fe525261267a3&photoset_id=72157714361162336&user_id=188522128%40N06&format=json&nojsoncallback=1_n"
         
         collectionView.reloadData()
         
